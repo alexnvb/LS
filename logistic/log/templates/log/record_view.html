@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card mb-3">
+    <div class="card-header">
+    Контрагент: <a href="{{ record.contractor.get_absolute_url }}">{{ record.contractor }}</a>
+    </div>
+      <div class="card-body">
+        <div class="media">
+                <div class="media-body">
+                    <h5 class="card-title">{{ record.type }}</h5>
+                    <p class="card-text">Ответственный {{ record.responsible.name }}</p>
+                    <p class="card-text">Дата создания {{ record.date_created }}</p>
+                    <p class="card-text">Назначеная дата {{ record.date_appointed }}</p>
+                    <p class="card-text">Авто {{ record.vehicle }}</p>
+                    <p class="card-text">Экспедитор {{ record.forwarder.name }}</p>
+                    <p class="card-text">Комментарий {{ record.comment }}</p>
+                </div>
+        </div>
+      </div>
+    <div class="card-footer text-muted">
+      {{ record.date_appointed|date:"Y-m-d H:i:s" }}
+    </div>
+</div>
+
+{% endblock %}

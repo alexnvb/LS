@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card mb-3">
+    <div class="card-header">
+    Контрагент: <p>{{ contractor.name }}</p>
+    </div>
+      <div class="card-body">
+        <div class="media">
+                <div class="media-body">
+                    <p class="card-text">Адрес: {{ contractor.address }}</p>
+                    <p class="card-text">Телефон: {{ contractor.tel }}</p>
+                </div>
+        </div>
+      </div>
+    <div class="card-footer text-muted">
+      {{ record.date_appointed|date:"Y-m-d H:i:s" }}
+    </div>
+</div>
+
+{% endblock %}

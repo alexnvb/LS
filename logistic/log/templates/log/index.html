@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center">
+              <div class="card-header">
+                  {{ date1|date:"d M" }}
+              </div>
+                  <div class="card-body">
+                          {% for item in rec1 %}
+                          <br>
+                            <a href="{{ item.get_absolute_url }}" class="btn btn-primary">
+                                {{ item.contractor }}
+                                {{ item.city }}
+                            </a>
+                          <br>
+                          <br>
+                          {% endfor %}
+                  </div>
+              <div class="card-footer text-muted">
+                Всего: 4
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card text-center">
+              <div class="card-header">
+                  {{ now|date:"d M" }}
+              </div>
+              <div class="card-body">
+                      {% for item in rec2 %}
+                          <br>
+                            <a href="{{ item.get_absolute_url }}" class="btn btn-primary">
+                                {{ item.contractor }}
+                                {{ item.city }}
+                            </a>
+                          <br>
+                          <br>
+                      {% endfor %}
+              </div>
+              <div class="card-footer text-muted">
+                Всего: 4
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center">
+              <div class="card-header">
+                  {{ date3|date:"d M" }}
+              </div>
+              <div class="card-body">
+                  {% for item in rec3 %}
+                  <br>
+                    <a href="{{ item.get_absolute_url }}" class="btn btn-primary">
+                        {{ item.contractor }}
+                        {{ item.city }}
+                    </a>
+                  <br>
+                  <br>
+                  {% endfor %}
+              </div>
+              <div class="card-footer text-muted">
+                Всего: 4
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center">
+              <div class="card-header">
+                  {{ date4|date:"d M" }}
+              </div>
+              <div class="card-body">
+                  {% for item in rec4 %}
+                  <br>
+                    <a href="{{ item.get_absolute_url }}" class="btn btn-primary">
+                        {{ item.contractor }}
+                        {{ item.city }}
+                    </a>
+                  <br>
+                  <br>
+                  {% endfor %}
+              </div>
+              <div class="card-footer text-muted">
+                Всего: 4
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center">
+              <div class="card-header">
+                  {{ date5|date:"d M" }}
+              </div>
+              <div class="card-body">
+                  {% for item in rec5 %}
+                  <br>
+                    <a href="{{ item.get_absolute_url }}" class="btn btn-primary">
+                        {{ item.contractor }}
+                        {{ item.city }}
+                    </a>
+                  <br>
+                  <br>
+                  {% endfor %}
+              </div>
+              <div class="card-footer text-muted">
+                Всего: 4
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center">
+              <div class="card-header">
+                  {{ date6|date:"d M" }}
+              </div>
+              <div class="card-body">
+                  {% for item in rec6 %}
+                  <br>
+                    <a href="{{ item.get_absolute_url }}" class="btn btn-primary">
+                        {{ item.contractor }}
+                        {{ item.city }}
+                    </a>
+                  <br>
+                  <br>
+                  {% endfor %}
+              </div>
+              <div class="card-footer text-muted">
+                Всего: 4
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
