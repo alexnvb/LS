@@ -23,13 +23,18 @@ class VehicleAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'plate_number')
     list_display_links = ('id', 'name')
 
-@admin.register(Employer)
+@admin.register(Manager)
 class EmployerAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'post', 'tel')
+    list_display = ('id', 'name', 'tel')
+    list_display_links = ('id', 'name')
+
+@admin.register(Forwarder)
+class EmployerAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'tel')
     list_display_links = ('id', 'name')
 
 @admin.register(Record)
 class RecordAdmin(admin.ModelAdmin):
-    list_display = ('id', 'type', 'date_created', 'date_appointed',
-                    'contractor', 'city', 'vehicle', 'done')
+    list_display = ('id', 'type', 'date_created', 'date_appointed', 'responsible',
+                    'forwarder', 'contractor', 'city', 'vehicle', 'done')
     list_display_links = ('id', 'type')

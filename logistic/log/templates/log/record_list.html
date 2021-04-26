@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container" >
+    <div class="row mt-4">
+
+
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center bg-light mt-1 mb-1">
+                <div class="card-header">
+                {{ date1 }}
+                </div>
+                <div class="col">
+                    {% for item in object_list %}
+                        {% if item.date_appointed == date1 %}
+                    {% if item.done %}
+
+                        <a href="{{ item.get_absolute_url }}" class="btn btn-secondary mt-2 mb-2">
+                            {% if item.comment %}
+                            <span class="badge rounded-pill bg-info text-dark">Прочти коментарий</span>
+                        {% endif %}
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+
+                                </a>
+                    {% else %}
+                            {% if item.type|title == 'Import' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-success mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% elif item.type|title == 'Export' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-danger mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% else %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-warning mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% endif %}
+                    {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center bg-light mt-1 mb-1">
+                <div class="card-header">
+                {{ date2 }}
+                </div>
+                <div class="col">
+                    {% for item in object_list %}
+                        {% if item.date_appointed == date2 %}
+                            {% if item.type|title == 'Import' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-success mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% elif item.type|title == 'Export' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-danger mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% else %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-warning mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center bg-light mt-1 mb-1">
+                <div class="card-header">
+                {{ date3 }}
+                </div>
+                <div class="col">
+                    {% for item in object_list %}
+                        {% if item.date_appointed == date3 %}
+                            {% if item.type|title == 'Import' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-success mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% elif item.type|title == 'Export' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-danger mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% else %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-warning mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center bg-light mt-1 mb-1">
+                <div class="card-header">
+                {{ date4 }}
+                </div>
+                <div class="col">
+                    {% for item in object_list %}
+                        {% if item.date_appointed == date4 %}
+                            {% if item.type|title == 'Import' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-success mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% elif item.type|title == 'Export' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-danger mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% else %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-warning mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center bg-light mt-1 mb-1">
+                <div class="card-header">
+                {{ date5 }}
+                </div>
+                <div class="col">
+                    {% for item in object_list %}
+                        {% if item.date_appointed == date5 %}
+                            {% if item.type|title == 'Import' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-success mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% elif item.type|title == 'Export' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-danger mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% else %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-warning mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-2 mt-4">
+            <div class="card text-center bg-light mt-1 mb-1">
+                <div class="card-header">
+                {{ date6 }}
+                </div>
+                <div class="col">
+                    {% for item in object_list %}
+                        {% if item.date_appointed == date6 %}
+                            {% if item.type|title == 'Import' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-success mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% elif item.type|title == 'Export' %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-danger mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% else %}
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-warning mt-2 mb-2">
+                                    <h6 class="card-title">{{ item.contractor }}</h6>
+                                    <h6 class="card-subtitle mb-2">{{ item.city }}</h6>
+                                    <p class="card-text">{{ item.forwarder.name }}</p>
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
